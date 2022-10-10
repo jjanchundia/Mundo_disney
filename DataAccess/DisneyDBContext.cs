@@ -12,5 +12,8 @@ namespace Mundo_disney.DataAccess
 
         //DbSet
         public DbSet<Users>? User { get; set; }
+        public DbSet<Movie>? Movie { get; set; }
+        public DbSet<Character>? Character { get; set; }
+        public DbSet<Gender>? Gender { get; set; }
     }
 }

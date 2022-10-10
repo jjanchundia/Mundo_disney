@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Mundo_disney.DataAccess;
 
@@ -11,9 +12,10 @@ using Mundo_disney.DataAccess;
 namespace Mundo_disney.Migrations
 {
     [DbContext(typeof(DisneyDBContext))]
-    partial class DisneyDBContextModelSnapshot : ModelSnapshot
+    [Migration("20221010170401_TblMovie_Gender_Character")]
+    partial class TblMovie_Gender_Character
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

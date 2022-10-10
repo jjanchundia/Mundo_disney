@@ -4,13 +4,13 @@ namespace Mundo_disney.Models.DataModels
 {
     public class Users : BaseEntity
     {
-        [Required, StringLength(50)]
+        [Required(ErrorMessage ="Nombre Requerido"), StringLength(50, ErrorMessage = "Nombre supera el máximo de caracteres")]
         public string Name { get; set; } = string.Empty;
         [Required, StringLength(100)]
         public string LastName { get; set; } = string.Empty;
-        [Required, EmailAddress]
+        [Required(ErrorMessage = "Correo Requerido"), EmailAddress]
         public string Email { get; set; } = string.Empty;
-        [Required]
+        [Required(ErrorMessage = "Contraseña Requerido")]
         public string Password { get; set; } = string.Empty;
     }
 }
